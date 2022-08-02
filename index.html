@@ -216,7 +216,7 @@
                         <p class="para-light">We leveraged AWS' EC2 instances to power and train our models. One of our initial runs nearly took 10 hours! Then we switched instances and cut the duration down to 5 hours for 25 epochs.</p>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <!--<div class="col-lg-4">
                     <div class="card bg-transparent">
                         <i class="fas fa-mobile fa-2x"></i>
                         <h4 class="py-2">Tidbit</h4>
@@ -236,7 +236,7 @@
                         <h4 class="py-2">Tidbit</h4>
                         <p class="para-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam odit consequatur doloribus natus in suscipit!</p>
                     </div>
-                </div>
+                </div>-->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </section> <!-- end of services -->
@@ -253,6 +253,7 @@
                     <div class="card bg-transparent px-4">
                         <h4 class="py-2">UNet</h4>
                         <p class="py-3">Initially created as a bio-medical image model, Unet uses an encoder path  that captures the context of images, then its decoder learns the discriminative features.</p>
+                        <p>This was the final model we utilized after observing each model's performance.</p>
                         <div class="block d-flex align-items-center">
                             <p class="pe-2"><i class="far fa-check-circle fa-1x"></i></p>
                             <p>Best performing model in terms of loss, accuracy, and epoch duration</p>
@@ -294,14 +295,83 @@
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </section> <!-- end of plans -->
+
+    <!-- Work -->
+     <section class="work d-flex align-items-center py-5" >
+         <div class="container-fluid text-light">
+             <div class="row">
+                 <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right">
+                     <img class="img-fluid" src="./assets/images/output1.png" alt="1st model output from Unet, DeepLabV3+, and PAN">
+                 </div>
+                 <div class="col-lg-5 d-flex align-items-center px-4 py-3" data-aos="">
+                     <div class="row">
+                         <div class="text-center text-lg-start py-4 pt-lg-0">
+                             <p>Outputs</p>
+                             <h2 class="py-2">Predicted Roads: Urban</h2>
+                             <p class ="para-light">Example outputs from all three models, ranging in accuracy on different densities of roads in a more dense, urban landscape.</p>
+                         </div>
+                         <div class="container" data-aos="fade-up">
+                             <div class="row g-5">
+                                 <p> Image: Unet, DeepLabV3+, and PAN outputs from top to bottom</p>
+                                 <p>
+                             </div>
+                         </div> <!-- end of container -->
+                     </div> <!-- end of row -->
+                 </div> <!-- end of col-lg-5 -->
+             </div> <!-- end of row -->
+         </div> <!-- end of container -->
+     </section> <!-- end of work -->
+     <!-- Work -->
+      <section class="work d-flex align-items-center py-5" >
+          <div class="container-fluid text-light">
+              <div class="row">
+                  <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right">
+                      <img class="img-fluid" src="./assets/images/output2.png" alt="2nd model output from Unet, DeepLabV3+, and PAN">
+                  </div>
+                  <div class="col-lg-5 d-flex align-items-center px-4 py-3" data-aos="">
+                      <div class="row">
+                          <div class="text-center text-lg-start py-4 pt-lg-0">
+                              <p>Outputs</p>
+                              <h2 class="py-2">Predicted Roads: Rural</h2>
+                              <p class ="para-light">Example output from all three models, ranging in accuracy on different densities of roads in a rural landscape.</p>
+                          </div>
+                          <div class="container" data-aos="fade-up">
+                              <div class="row g-5">
+                                  <p> Image: Unet, DeepLabV3+, and PAN outputs from top to bottom</p>
+                                  <p>
+                              </div>
+                          </div> <!-- end of container -->
+                      </div> <!-- end of row -->
+                  </div> <!-- end of col-lg-5 -->
+              </div> <!-- end of row -->
+          </div> <!-- end of container -->
+      </section> <!-- end of work -->
+
+      <!-- Best Model -->
+      <section class="plans d-flex align-items-center py-5" id="plans">
+          <div class="container text-light" >
+              <div class="text-center pb-4">
+                  <p>OUR BEST MODEL</p>
+                  <h2 class="py-2">UNet</h2>
+                  <p class="para-light">Our best model was a Unet model run across 25 epochs with a 100 batch size and 0.003 learning rate. There is a large improvement over the initial model as seen below.</p>
+                  <br>
+                  <p><img class="img-fluid" src="./assets/images/unetcompare.png" alt="Screenshot of Unet model comparison"></p>
+              </div>
+              </div> <!-- end of row -->
+          </div> <!-- end of container -->
+      </section> <!-- end of plans -->
+
     <!-- App -->
     <div class="slider-1 testimonial text-light d-flex align-items-center" id="app">
         <div class="container text-light" >
             <div class="text-center pb-4">
                 <p>OUR APP</p>
                 <h2 class="py-2">Upload satellite imagery and see our model output predicted roads in real-time!</h2>
-                <p class="para-light">Using our best model which was a Unet model run across 25 epochs with a 100 batch size and 0.003 learning rate, we created a Flask app that will take a satellite imagery file and output the file back with predicted roads overlaid on top.</p>
-                <br><a class="btn" href="http://capstone-app-dev.us-west-2.elasticbeanstalk.com/" >App</a>
+                <p class="para-light">Using our best model, we created a Flask app that will take a satellite imagery file and output the file back with predicted roads overlaid on top.</p>
+                <br>
+                <p><img class="img-fluid" src="./assets/images/app.png" alt="Screenshot of Flask app utilizing the road segmentation model."></p>
+                <br>
+                <p><a class="btn" href="http://capstone-app-dev.us-west-2.elasticbeanstalk.com/" >App</a></p>
             </div>
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -330,7 +400,8 @@
                                                 <p>padalah@ischool.berkeley.edu</p>
                                             </div>
                                         </div>
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam commodi officia laborum qui iste quidem!</p>
+                                        <br>
+                                        <!---<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam commodi officia laborum qui iste quidem!</p>-->
                                     </div>
 									<br>
 				<div class="testimonial-card p-4">
@@ -344,7 +415,8 @@
                                                 <p>cjskokowski@ischool.berkeley.edu</p>
                                             </div>
                                         </div>
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam commodi officia laborum qui iste quidem!</p>
+                                        <br>
+                                        <!---<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam commodi officia laborum qui iste quidem!</p>-->
                                     </div>
 									<br>
 				<div class="testimonial-card p-4">
@@ -358,7 +430,8 @@
                                                 <p>lchng16@ischool.berkeley.edu</p>
                                             </div>
                                         </div>
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam commodi officia laborum qui iste quidem!</p>
+                                        <br>
+                                        <!---<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam commodi officia laborum qui iste quidem!</p>-->
                                     </div>
 
                 </div> <!-- end of col -->
