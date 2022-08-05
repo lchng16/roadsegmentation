@@ -56,10 +56,10 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Data</a>
+                        <a class="nav-link" href="#data">Data</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#plans">Models</a>
+                        <a class="nav-link" href="#models">Models</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#team">Team</a>
@@ -140,7 +140,7 @@
     </section> <!-- end of about -->
 
    <!-- Work -->
-    <section class="work d-flex align-items-center py-5" >
+    <section class="work d-flex align-items-center py-5" id="data" >
         <div class="container-fluid text-light">
             <div class="row">
                 <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right">
@@ -241,7 +241,7 @@
         </div> <!-- end of container -->
     </section> <!-- end of services -->
     <!-- Plans -->
-    <section class="plans d-flex align-items-center py-5" id="plans">
+    <section class="plans d-flex align-items-center py-5" id="models">
         <div class="container text-light" >
             <div class="text-center pb-4">
                 <p>OUR MODEL(S)</p>
@@ -348,7 +348,7 @@
       </section> <!-- end of work -->
 
       <!-- Best Model -->
-      <section class="plans d-flex align-items-center py-5" id="plans">
+      <section class="plans d-flex align-items-center py-5">
           <div class="container text-light" >
               <div class="text-center pb-4">
                   <p>OUR BEST MODEL</p>
@@ -356,6 +356,50 @@
                   <p class="para-light">Our best model was a Unet model run across 25 epochs with a 100 batch size and 0.003 learning rate. There is a large improvement over the initial model as seen below.</p>
                   <br>
                   <p><img class="img-fluid" src="./assets/images/unetcompare.png" alt="Screenshot of Unet model comparison"></p>
+              </div>
+              </div> <!-- end of row -->
+          </div> <!-- end of container -->
+      </section> <!-- end of plans -->
+
+      <!-- Work -->
+       <section class="work d-flex align-items-center py-5" >
+           <div class="container-fluid text-light">
+               <div class="row">
+                   <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right">
+                       <img class="img-fluid" src="./assets/images/bestmodel.png" alt="1st model output from Unet, DeepLabV3+, and PAN">
+                   </div>
+                   <div class="col-lg-5 d-flex align-items-center px-4 py-3" data-aos="">
+                       <div class="row">
+                           <div class="text-center text-lg-start py-4 pt-lg-0">
+                               <p>Best Model Outputs</p>
+                               <h2 class="py-2">Predicted Roads</h2>
+                               <p class ="para-light">Example outputs from our best model</p>
+                           </div>
+                           <div class="container" data-aos="fade-up">
+                               <div class="row g-5">
+                                   <p> Image: 3 rows of Unet batch 100 model outputs</p>
+                                   <p>
+                               </div>
+                           </div> <!-- end of container -->
+                       </div> <!-- end of row -->
+                   </div> <!-- end of col-lg-5 -->
+               </div> <!-- end of row -->
+           </div> <!-- end of container -->
+       </section> <!-- end of work -->
+       <!-- Work -->
+
+      <section class="plans d-flex align-items-center py-5">
+          <div class="container text-light" >
+              <div class="text-center pb-4">
+                <p class="para-light">Below are our losses and IoU(Intersection of Union, used as a substitute for accuracy due to unbalanced classes of road and background if we used pixel-wise accuracy), as well as a confusion matrix.</p>
+                <br>
+                <p><img class="img-fluid" src="./assets/images/loss.png" alt="Screenshot of Unet model loss"></p>
+                <br>
+                <p><img class="img-fluid" src="./assets/images/iou.png" alt="Screenshot of Unet model IoU"></p>
+                <br>
+                <p class="para-light">True refers to background pixel classification, and false refers to road pixel classification.</p>
+                <br>
+                <p><img class="img-fluid" src="./assets/images/cmatrix.png" alt="Screenshot of Unet model confusion matrix"></p>
               </div>
               </div> <!-- end of row -->
           </div> <!-- end of container -->
@@ -372,8 +416,9 @@
                 <p><img class="img-fluid" src="./assets/images/app.png" alt="Screenshot of Flask app utilizing the road segmentation model."></p>
                 <br>
                 <p><a class="btn" href="http://capstone-app-dev.us-west-2.elasticbeanstalk.com/" >App</a></p>
+                <br>
                 <h2 class="py-2">Here is our capstone presentation:</h2>
-                <p class="para-light"><a href="https://docs.google.com/presentation/d/1ll4cnMI0RnE-ABkRFbUDe89LoHbanmFtF7E6qxAgHto/edit?usp=sharing">Link to Our Presentation</a></p>
+                <p><a class="btn" href="https://docs.google.com/presentation/d/1ll4cnMI0RnE-ABkRFbUDe89LoHbanmFtF7E6qxAgHto/edit?usp=sharing">Link to Our Presentation</a></p>
             </div>
             </div> <!-- end of row -->
         </div> <!-- end of container -->
